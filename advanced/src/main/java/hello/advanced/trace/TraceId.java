@@ -25,11 +25,11 @@ public class TraceId {
     }
 
     public TraceId createNextId() {
-        return new TraceId(id, level++);
+        return new TraceId(id, ++level);
     }
 
     public TraceId createPreviousId() {
-        return new TraceId(id, level--);
+        return new TraceId(id, --level);
     }
 
     public boolean isFirstLevel() {
